@@ -1,0 +1,336 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f4f8;
+    color: #212832;
+}
+
+.hero {
+    min-height: 132px;
+    padding: 28px 16px 32px;
+    background: #20262d;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-icon {
+    font-size: 30px;
+    line-height: 1;
+}
+
+.hero h1 {
+    margin: 8px 0 0;
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.playlist-app {
+    width: calc(100% - 48px);
+    max-width: 1040px;
+    margin: 28px auto 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 44px 22px;
+}
+
+.card {
+    flex: 1 1 420px;
+    min-width: 0;
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 12px 28px rgba(31, 41, 55, 0.08);
+}
+
+.form-card h2 {
+    margin: 0 0 14px;
+    color: #5d6a78;
+    font-size: 22px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    min-height: 37px;
+    border: 1px solid #cbd5df;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+input[type="text"] {
+    padding: 8px 12px;
+}
+
+input[type="file"] {
+    padding: 6px;
+    color: #111827;
+}
+
+.file-label {
+    margin-top: 6px;
+    color: #5d6a78;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+button {
+    border: 0;
+    border-radius: 4px;
+    min-height: 37px;
+    padding: 8px 14px;
+    background: #0d6efd;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+button:hover {
+    background: #0b5ed7;
+}
+
+.player-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 440px;
+}
+
+.player-content {
+    width: 100%;
+    max-width: 460px;
+    text-align: center;
+}
+
+.player-content h2 {
+    margin: 0 0 12px;
+    color: #5d6a78;
+    font-size: 25px;
+}
+
+.player-content h3 {
+    margin: 0 0 18px;
+    color: #0d6efd;
+    font-size: 22px;
+}
+
+.native-player {
+    width: 100%;
+    margin: 18px auto 14px;
+    padding: 14px;
+    border-radius: 35px;
+    background: #f2f4f6;
+}
+
+audio {
+    display: block;
+    width: 100%;
+}
+
+#playerMessage {
+    min-height: 20px;
+    margin: 0 0 14px;
+    color: #5d6a78;
+    font-weight: 700;
+}
+
+.player-content strong {
+    color: #5d6a78;
+    font-size: 14px;
+}
+
+.table-card {
+    flex-basis: 100%;
+    padding: 22px 24px 38px;
+}
+
+.table-scroll {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding: 10px;
+    background: #1f252c;
+    color: #fff;
+    text-align: left;
+    font-size: 17px;
+}
+
+td {
+    padding: 12px 10px;
+    background: #dff1ff;
+    border-bottom: 1px solid #d7e7f3;
+    color: #0f1720;
+    font-size: 16px;
+    font-weight: 700;
+    vertical-align: middle;
+}
+
+tbody tr {
+    border-left: 4px solid #0d6efd;
+}
+
+tbody tr.selected-song td {
+    background: #cfe9ff;
+}
+
+td span {
+    display: block;
+    margin-top: 3px;
+    color: #5d6a78;
+    font-size: 14px;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icon-button {
+    min-height: 0;
+    padding: 0;
+    background: transparent;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.icon-button:hover {
+    background: transparent;
+}
+
+.play-action {
+    color: #0d6efd;
+}
+
+.delete-action {
+    color: #ff315d;
+}
+
+.fixed-song {
+    color: #5d6a78;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+@media (max-width: 820px) {
+    .playlist-app {
+        width: calc(100% - 28px);
+        max-width: 620px;
+        gap: 22px;
+    }
+
+    .card {
+        flex-basis: 100%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .player-card {
+        min-height: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .hero {
+        min-height: 110px;
+        padding: 22px 12px 26px;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+    }
+
+    .playlist-app {
+        width: calc(100% - 18px);
+        margin-top: 16px;
+    }
+
+    .card {
+        border-radius: 10px;
+        padding: 16px;
+    }
+
+    .player-content h2 {
+        font-size: 21px;
+    }
+
+    .player-content h3 {
+        font-size: 18px;
+    }
+
+    .table-card {
+        padding: 16px;
+    }
+
+    .table-scroll {
+        overflow: visible;
+    }
+
+    table,
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tbody tr {
+        margin-bottom: 12px;
+        border-left: 4px solid #0d6efd;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #dff1ff;
+    }
+
+    td {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #c9ddeb;
+        font-size: 15px;
+    }
+
+    td::before {
+        content: attr(data-label);
+        color: #1f252c;
+        flex: 0 0 105px;
+        font-weight: 800;
+    }
+
+    td:last-child {
+        border-bottom: 0;
+    }
+
+    .actions {
+        justify-content: flex-start;
+    }
+}

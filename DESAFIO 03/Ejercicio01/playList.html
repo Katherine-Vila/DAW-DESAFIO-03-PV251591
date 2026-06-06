@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Musical</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='24' font-size='24'%3E%F0%9F%8E%A7%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/player.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/jquery-lite.js"></script>
+    <script src="js/player.js"></script>
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-icon" aria-hidden="true">&#127911;</div>
+        <h1>Mi Playlist Personal</h1>
+    </header>
+
+    <main class="playlist-app">
+        <section class="card form-card">
+            <h2>A&ntilde;adir Nueva Canci&oacute;n</h2>
+            <form id="songForm" autocomplete="off">
+                <input type="text" id="songName" placeholder="Nombre de la canci&oacute;n" required>
+                <input type="text" id="singer" placeholder="Cantante" required>
+                <input type="text" id="label" placeholder="Discogr&aacute;fica" required>
+                <input type="text" id="duration" placeholder="Duraci&oacute;n (ej: 3:45)" required>
+                <input type="text" id="country" placeholder="Nacionalidad" required>
+
+                <label class="file-label" for="audioFile">Selecciona archivo MP3:</label>
+                <input type="file" id="audioFile" accept="audio/mp3,audio/mpeg,audio/wav,audio/ogg" required>
+
+                <button type="submit">Guardar en la Lista</button>
+            </form>
+        </section>
+
+        <section class="card player-card">
+            <div class="player-content">
+                <h2>&#9835; Ahora Suena...</h2>
+                <h3 id="currentSong">Cumplea&ntilde;os Feliz - Parch&iacute;s</h3>
+                <div class="native-player">
+                    <audio id="audioPlayer" controls preload="metadata"></audio>
+                </div>
+                <p id="playerMessage"></p>
+                <strong>Formatos soportados: MP3, WAV, OGG</strong>
+            </div>
+        </section>
+
+        <section class="card table-card">
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Canci&oacute;n</th>
+                            <th>Cantante</th>
+                            <th>Duraci&oacute;n</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="playlistBody"></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
